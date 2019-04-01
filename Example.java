@@ -15,7 +15,7 @@ public class Example extends JFrame {
 	}
 
 	private JButton quitButton;
-	private JButton testButton;
+	//private JButton testButton;
 	private JButton button0;
 	private JButton button1;
 	private JButton button2;
@@ -37,7 +37,7 @@ public class Example extends JFrame {
 	private JPanel pane;
 	private GroupLayout gl;
 	private JTextField tf1;
-	private JTextField tf2;
+	//private JTextField tf2;
 
 	String addString;
 	String subString;
@@ -61,7 +61,7 @@ public class Example extends JFrame {
 		//new Button
 		quitButton = new JButton("Quit");
 		//set tooltip text
-		quitButton.setToolTipText("Want to quit?");
+		//quitButton.setToolTipText("Want to quit?");
 
 		//ActionListener (Quit on Button Press)
 		quitButton.addActionListener((event) -> System.exit(0));
@@ -238,17 +238,17 @@ public class Example extends JFrame {
 
 			}
 		});
-		testButton = new JButton("Press");
-		testButton.setToolTipText("Press me");
-		testButton.addActionListener((event) -> onSubmit());
+		//testButton = new JButton("Press");
+		//testButton.setToolTipText("Press me");
+		//testButton.addActionListener((event) -> onSubmit());
 
 		tf1= new JTextField();
 		tf1.setFont(font);
-		tf1.setText("Enter the input");
+		tf1.setText("                      ");
 
-		tf2 = new JTextField();
-		tf2.setFont(font);
-		tf2.setText("Output goes here");
+		//tf2 = new JTextField();
+		//tf2.setFont(font);
+		//tf2.setText("Output goes here");
 
 		setTitle("Simple Calculator");
 
@@ -289,8 +289,8 @@ public class Example extends JFrame {
 		//mind the order of the components!
 		pane = (JPanel) getContentPane();
 		pane.add(tf1);
-		pane.add(testButton);
-		pane.add(tf2);
+		//pane.add(testButton);
+		//pane.add(tf2);
 		pane.add(quitButton);
 		pane.add(numberBlock);
 		pane.setLayout(new FlowLayout());
@@ -369,12 +369,13 @@ public class Example extends JFrame {
 		return n1/n2;
 	}
 
-	private void onSubmit(){
-		tf2.setText("You entered: " + tf1.getText());
-	}
+	//	private void onSubmit(){
+	//		tf2.setText("You entered: " + tf1.getText());
+	//	}
 
 	public static void main(String[] args){
 		//places the application on the Swing Event Queue such that all UI updates are concurrency-safe
+
 		EventQueue.invokeLater(() ->{
 			Example ex = new Example();
 			ex.setVisible(true);
