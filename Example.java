@@ -6,6 +6,9 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.util.ArrayList;
 
+//Please remove the second textfield from the example.
+//Also when entering an equation without pressing clear in the beginning, your programm throws an error.
+
 public class Example extends JFrame {
 	public Example(){
 		initUI();
